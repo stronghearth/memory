@@ -44,6 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+
+    //randomize Cards
+
+    cardArray.sort(() => 0.5 - Math.random())
     //create game board
 
     const grid = document.querySelector('.grid')
