@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
     var cardsWon = []
 
     function createBoard() {
-        for (let i=0; i <= cardArray.length; i++) {
+        for (let i=0; i < cardArray.length; i++) {
             var card = document.createElement('img')
             card.setAttribute('src', 'images/blank.png')
             card.setAttribute('data-id', i)
-            // card.addEventListener('click', flipCard)
+            card.addEventListener('click', flipCard)
             grid.appendChild(card)
         }
     }
@@ -86,14 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId = []
         resultDisplay.textContent = cardsWon.length
         if (cardsWon.length === cardArray.length/2) {
-            resultDisplay.textContent = 'Congrats! You Found all of the Flowers!'
+            resultDisplay.textContent = 'Congrats! You found all of the Flowers!'
         }
     }
 
-    //flip the card
+    //flip the cards
 
     function flipCard () {
-        var cardId = this.getAttribute('data=id')
+        var cardId = this.getAttribute('data-id')
         cardsChosen.push(cardArray[cardId].name)
         cardsChosenId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
@@ -101,5 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(checkForMatch, 500)
         }
     }
+
     createBoard()
 })
