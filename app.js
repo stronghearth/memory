@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
             img: 'images/mum.png'
         },
         {
+            name: 'tulip',
+            img: 'images/tulip.png'
+        },
+        {
             name: 'windflower',
             img: 'images/windflower.png'
         },
@@ -37,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'mum',
             img: 'images/mum.png'
+        },
+        {
+            name: 'tulip',
+            img: 'images/tulip.png'
         },
         {
             name: 'windflower',
